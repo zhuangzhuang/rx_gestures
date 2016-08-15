@@ -1,0 +1,16 @@
+{
+  "name": "rx_gestures",
+  "version": "1.0.0",
+  "description": "Html5 手势识别 rx 版本",
+  "main": "index.js",
+  "dependencies": {
+    "rx": "^4.1.0",
+    "vue": "^1.0.26"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zhuangzhuang1988@outlook.com",
+  "license": "ISC"
+}

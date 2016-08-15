@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        .wrapper {
+            height: 300px;
+            background: #ccc;
+            text-align: center;
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            overflow: hidden;
+        }
+
+        @-webkit-keyframes flash {
+            from, 50%, to {
+                opacity: 1;
+            }
+
+            25%, 75% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes flash {
+            from, 50%, to {
+                opacity: 1;
+            }
+
+            25%, 75% {
+                opacity: 0;
+            }
+        }
+
+        .flash {
+            -webkit-animation-name: flash;
+            animation-name: flash;
+        }
+
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .lena {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .mask {
+            width: 200px;
+        }
+
+        * {
+            -webkit-user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <div class="wrapper">
+                <img :class="img_class"
+                     :style="img_style" 
+                     src="http://read.pudn.com/downloads94/sourcecode/graph/texture_mapping/374111/shuzituxiang/len_std.jpg" style="transform: scale(1) rotateZ(0deg); left: 0px; top: 0px;">
+            </div>
+            <div>
+                <label>Pinch</label> <span>{{state.pinch}}</span>
+                <label>Rotate</label> <span>{{state.angle}}</span>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/rx/dist/rx.all.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
